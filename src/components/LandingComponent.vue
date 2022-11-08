@@ -19,11 +19,14 @@ export default {
     return {
       items: [
         {
-          src: require('../assets/Landing/first.jpg'),
+          src: require('../assets/LandingMobile/first.png'),
         },
         {
-          src: require('../assets/Landing/second.jpg'),
-        }
+          src: require('../assets/LandingMobile/second.png'),
+        },
+        {
+          src: require('../assets/LandingMobile/third.png'),
+        },
       ],
     }
   },
