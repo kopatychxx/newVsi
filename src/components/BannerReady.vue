@@ -10,7 +10,6 @@
       </div>
     </div>
     <div class="bannerContent">
-      </div>
       <div class="left">
         <p class="textDesktop">Комплекс з продуманою інфраструктурою в межах столиці та на природі одночасно. Тут є все, що може знадобитися, а метро та окружна дорога у 15-хвилинній доступності.
           <br><br>
@@ -24,6 +23,7 @@
       </div>
       <img src="../assets/BannerReady.jpg" alt="">
     <div class="butt mobbutton">Записатися на перегляд
+    </div>
     </div>
   </div>
 </template>
