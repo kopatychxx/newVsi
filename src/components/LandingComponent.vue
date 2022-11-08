@@ -9,7 +9,14 @@
       ></v-carousel-item>
     </v-carousel>
     <img class="landingImg" src="../assets/Landing/second.jpg" alt="">
-  </div>
+    <div class="ar">
+      <div class="arrow-down">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      </div>
+    </div>
 </template>
 
 <script>
@@ -46,13 +53,51 @@ export default {
   z-index: 2;
   text-align: center;
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
   left: 25%;
   font-weight: 400;
   font-size: 55px;
   line-height: 71px;
   color: #ffffff;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.ar {
+  display: flex;
+  justify-content: center;
+}
+.arrow-down {
+  position: absolute;
+  bottom: 50px;
+  margin: 0 auto;
+}
+.arrow-down span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-bottom: 5px solid #ffffff;
+  border-right: 5px solid #ffffff;
+  transform: rotate(45deg);
+  margin: -16px;
+  animation: arrow-down 2s infinite;
+}
+.arrow-down span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.arrow-down span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes arrow-down {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
 }
 @media screen and (max-width: 1440px) {
   .landing__title {
@@ -61,7 +106,7 @@ export default {
 }
 @media screen and (max-width: 1024px) {
   .landing__title {
-    bottom: 10%;
+    bottom: 20%;
     left: 7%;
   }
 }
@@ -79,7 +124,7 @@ export default {
 }
 @media screen and (max-width: 425px) {
   .landing__title {
-    bottom: 10%;
+    bottom: 17%;
     font-size: 32px;
     line-height: normal;
   }
