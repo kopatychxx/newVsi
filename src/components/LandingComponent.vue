@@ -1,13 +1,14 @@
 <template>
   <div class="landing">
     <h1 class="landing__title">ЖИТЛОВИЙ КОМПЛЕКС <br> КОМФОРТ-КЛАСУ У БІЛОГОРОДЦІ</h1>
-    <v-carousel cycle hide-delimiters :show-arrows="false" height="100vh">
+    <v-carousel class="carousel__mobile" cycle hide-delimiters :show-arrows="false" height="100vh">
       <v-carousel-item
           v-for="(item,i) in items"
           :key="i"
           :src="item.src"
       ></v-carousel-item>
     </v-carousel>
+    <img class="landingImg" src="../assets/Landing/second.jpg" alt="">
   </div>
 </template>
 
@@ -30,9 +31,13 @@ export default {
 </script>
 
 <style scoped>
-.landing {
-  width: 100%;
-  height: 100%;
+.carousel__mobile {
+  display: none;
+}
+.landingImg {
+  display: block;
+  height: 100vh;
+  width: 100vw;
 }
 .landing__title {
   z-index: 2;
@@ -61,6 +66,13 @@ export default {
   .landing__title {
     left: 2%;
   }
+  .carousel__mobile {
+    display: block;
+  }
+  .landingImg {
+    display: none;
+  }
+
 }
 @media screen and (max-width: 425px) {
   .landing__title {
