@@ -140,6 +140,8 @@ export default {
   }
   .butt {
     margin: 25px auto;
+    padding: 15px 30px;
+    width: 250px;
   }
   .subtitle {
     display: none;
