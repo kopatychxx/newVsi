@@ -10,6 +10,7 @@
       </div>
     </div>
     <div class="bannerContent">
+      </div>
       <div class="left">
         <p class="textDesktop">Комплекс з продуманою інфраструктурою в межах столиці та на природі одночасно. Тут є все, що може знадобитися, а метро та окружна дорога у 15-хвилинній доступності.
           <br><br>
@@ -18,10 +19,11 @@
           Оберіть планування готових апартаментів від 20м2 до 115м2, замовте безкоштовний дизайн і насолоджуйтесь власним житлом вже сьогодні!
         </p>
         <p class="textMobile">Оберіть планування готових апартаментів від 20м2 до 115м2, замовте безкоштовний дизайн і насолоджуйтесь власним житлом вже сьогодні!</p>
-        <div class="butt">Записатися на перегляд
+        <div class="butt deskButton">Записатися на перегляд
         </div>
       </div>
       <img src="../assets/BannerReady.jpg" alt="">
+    <div class="butt mobbutton">Записатися на перегляд
     </div>
   </div>
 </template>
@@ -37,6 +39,9 @@ export default {
   display: flex;
   flex-direction: column;
   margin: 75px 15%;
+}
+.mobbutton {
+  display: none;
 }
 .bannerHeader {
   display: flex;
@@ -109,7 +114,13 @@ export default {
 @media screen and (max-width: 425px) {
   .bannerContent {
     align-items: center;
-    flex-direction: column-reverse;
+    flex-direction: column;
+  }
+  .deskButton {
+    display: none;
+  }
+  .mobbutton {
+    display: flex;
   }
   .bannerContent {
     margin-top: 15px;
@@ -126,7 +137,6 @@ export default {
   .left {
     margin-top: 5px;
     width: 100%;
-    text-align: center;
   }
   .butt {
     margin: 25px auto;
