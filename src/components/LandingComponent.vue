@@ -126,6 +126,9 @@ export default {
     font-size: 32px;
     line-height: normal;
   }
+  .ar {
+    top: 420px;
+  }
 }
 @media screen and (max-width: 320px) {
   .landing__title {
