@@ -43,7 +43,7 @@ export default {
   z-index: 2;
   text-align: center;
   position: absolute;
-  top: 40%;
+  bottom: 10%;
   left: 25%;
   font-weight: 400;
   font-size: 55px;
