@@ -127,7 +127,7 @@ export default {
     line-height: normal;
   }
   .ar {
-    top: 420px;
+    top: 460px;
   }
 }
 @media screen and (max-width: 320px) {
