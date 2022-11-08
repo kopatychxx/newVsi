@@ -61,7 +61,7 @@ export default {
 }
 @media screen and (max-width: 1024px) {
   .landing__title {
-    top: 40%;
+    bottom: 10%;
     left: 7%;
   }
 }
@@ -79,7 +79,7 @@ export default {
 }
 @media screen and (max-width: 425px) {
   .landing__title {
-    top: 50%;
+    bottom: 10%;
     font-size: 32px;
     line-height: normal;
   }
