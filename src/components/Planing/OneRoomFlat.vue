@@ -1,14 +1,15 @@
 <template>
   <div class="flatPlan">
     <carousel
+        class="carousel"
         :touchDrag="false"
         :mouseDrag="false"
         :paginationEnabled="false"
         :centerMode="true"
         :perPageCustom="[
-        [1920, 5],
-        [1440, 4],
-        [1024, 4],
+        [1920, 4],
+        [1440,  3],
+        [1024, 3],
         [768, 2],
         [425, 1],
         [375, 1],
@@ -79,6 +80,9 @@ export default {
   padding: 10px;
   width: 260px;
   box-shadow: 10px 10px 6px -5px rgba(0, 0, 0, 0.17);
+}
+.carousel {
+  margin: 0 2%;
 }
 .flat__info {
   padding: 10px;

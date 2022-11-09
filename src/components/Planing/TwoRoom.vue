@@ -6,9 +6,9 @@
         :paginationEnabled="false"
         :centerMode="false"
         :perPageCustom="[
-        [1920, 5],
-        [1440, 4],
-        [1024, 4],
+        [1920, 3],
+        [1440, 3],
+        [1024, 3],
         [768, 2],
         [425, 1],
         [375, 1],
