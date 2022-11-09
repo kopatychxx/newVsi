@@ -1,5 +1,5 @@
 <template>
-  <div class="planingComponent">
+  <div class="planingComponent" id="planing">
     <v-select
         class="selectFlat"
         v-model="select"
@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
 .planingComponent {
-  margin: 75px 15%;
+  margin: 75px 15% 150px;
 }
 .selectFlat {
   width: 250px;

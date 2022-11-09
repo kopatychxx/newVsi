@@ -4,6 +4,10 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 import VueCarousel from 'vue-carousel';
+import VueScrollTo from 'vue-scrollto'
+
+Vue.use(VueScrollTo)
+
 Vue.use(VueCarousel);
 
 Vue.config.productionTip = false
