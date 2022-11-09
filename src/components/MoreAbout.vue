@@ -1,5 +1,5 @@
 <template>
-  <div class="moreAbout">
+  <div data-aos="zoom-in" data-aos-duration="4000" class="moreAbout">
     <div class="left">
       <p>Більше про планування</p>
       <h4>Ціна від 30 700грн за м2 <br>

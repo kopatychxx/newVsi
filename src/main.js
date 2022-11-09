@@ -5,9 +5,10 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 import VueCarousel from 'vue-carousel';
 import VueScrollTo from 'vue-scrollto'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 Vue.use(VueScrollTo)
-
 Vue.use(VueCarousel);
 
 Vue.config.productionTip = false

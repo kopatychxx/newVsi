@@ -1,5 +1,5 @@
 <template>
-  <div class="planingComponent" id="planing">
+  <div data-aos="slide-up" data-aos-duration="4000" class="planingComponent" id="planing">
     <v-select
         class="selectFlat"
         v-model="select"

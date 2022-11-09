@@ -7,7 +7,11 @@
     <MoreAbout />
     <PlaningComponent />
     <ModerBaner class="moderBaner" />
-    <p class="textMobile">Життя з усіма її плюсами, але з незайманою природою за вікном - найкраще, що ви можете вибрати для себе та близьких.</p>
+    <EcologicalBanner class="ecologicalBanner" />
+    <div class="textMobile">
+      <h3>ПРО ЛОКАЦІЮ ТА ІНФРАСТРУКТУРУ</h3>
+      <p>Життя з усіма її плюсами, але з незайманою природою за вікном - найкраще, що ви можете вибрати для себе та близьких.</p>
+    </div>
     <FooterComponent />
   </div>
 </template>
@@ -21,10 +25,12 @@
   import HeaderComponent from "@/components/HeaderComponent";
   import HeaderMobile from "@/components/HeaderMobile";
   import FooterComponent from "@/components/FooterComponent";
+  import EcologicalBanner from "@/components/EcologicalBanner";
 
   export default {
     name: 'HomeView',
     components: {
+      EcologicalBanner,
       FooterComponent,
       HeaderMobile,
       HeaderComponent,
@@ -57,7 +63,13 @@
   }
   .textMobile {
     display: flex;
+    flex-direction: column;
     margin: 35px 5%;
+  }
+  .textMobile h3 {
+    line-height: normal;
+    font-size: 25px;
+    margin-bottom: 15px;
   }
 }
 </style>

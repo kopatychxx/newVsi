@@ -2,11 +2,11 @@
   <div class="moderBaner">
     <div class="modern">
       <div class="photo">
-        <img src="../assets/ModernBanner/first.png" alt="">
-        <img src="../assets/ModernBanner/second.png" alt="">
-        <img src="../assets/ModernBanner/third.png" alt="">
+        <img data-aos="fade-right" data-aos-duration="4000" src="../assets/ModernBanner/first.png" alt="">
+        <img data-aos="fade-right" data-aos-duration="5000" src="../assets/ModernBanner/second.png" alt="">
+        <img data-aos="fade-right" data-aos-duration="6000" src="../assets/ModernBanner/third.png" alt="">
       </div>
-      <div class="text">
+      <div data-aos="fade-left" data-aos-duration="6000" class="text">
         <h3>Сучасно</h3>
         <p>Готові квартири підключені до всіх необхідних комунікацій, встановлені вікна і двері, залишається тільки обрати дизайн</p>
       </div>

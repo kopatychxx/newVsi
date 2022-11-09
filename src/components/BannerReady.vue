@@ -9,8 +9,8 @@
         <p style="color: gray; margin: 0;">перші дві черги введенні в експлуатацію</p>
       </div>
     </div>
-    <div class="bannerContent">
-      <div class="left">
+    <div  class="bannerContent">
+      <div data-aos="fade-right" data-aos-duration="4000" class="left">
         <p class="textDesktop">Комплекс з продуманою інфраструктурою в межах столиці та на природі одночасно. Тут є все, що може знадобитися, а метро та окружна дорога у 15-хвилинній доступності.
           <br><br>
           Життя з усіма її плюсами, але з незайманою природою за вікном - найкраще, що ви можете вибрати для себе та близьких.
@@ -21,7 +21,7 @@
         <div class="butt deskButton">Записатися на перегляд
         </div>
       </div>
-      <img src="../assets/BannerReady.jpg" alt="">
+      <img data-aos="fade-left" data-aos-duration="4000" src="../assets/BannerReady.jpg" alt="">
     <div class="butt mobbutton">Записатися на перегляд
     </div>
     </div>
