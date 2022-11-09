@@ -6,7 +6,8 @@
     <BannerReady />
     <MoreAbout />
     <PlaningComponent />
-    <ModerBaner />
+    <ModerBaner class="moderBaner" />
+    <p class="textMobile">Життя з усіма її плюсами, але з незайманою природою за вікном - найкраще, що ви можете вибрати для себе та близьких.</p>
     <FooterComponent />
   </div>
 </template>
@@ -44,9 +45,19 @@
 .headerMobile {
   display: none;
 }
+.textMobile {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .headerComponent {
     display: flex;
+  }
+  .moderBaner {
+    display: none;
+  }
+  .textMobile {
+    display: flex;
+    margin: 35px 5%;
   }
 }
 </style>

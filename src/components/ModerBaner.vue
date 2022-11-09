@@ -44,13 +44,24 @@ export default {
 }
 
 @media screen and (max-width: 1440px) {
-
+  .photo img {
+    width: 250px;
+  }
 }
 @media screen and (max-width: 1024px) {
-
-}
-@media screen and (max-width: 768px) {
-
+  .moderBaner {
+    padding: 35px 5%;
+  }
+  .text {
+    position: relative;
+    top: -50px
+  }
+  .modern {
+    column-gap: 20px;
+  }
+  .photo img {
+    width: 200px;
+  }
 }
 @media screen and (max-width: 768px) {
 
