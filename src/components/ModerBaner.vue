@@ -62,12 +62,16 @@ export default {
 }
 @media screen and (max-width: 425px){
   .photo img {
-    width: 125px;
+    width: 220px;
+  }
+  .photo img:first-child,
+  .photo img:last-child{
+    display: none;
   }
 }
 @media screen and (max-width: 375px){
   .photo img {
-    width: 100px;
+    width: 220px;
   }
 }
 </style>
