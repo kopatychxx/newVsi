@@ -63,12 +63,6 @@ export default {
         floor: "1-8 поверх",
         section: "1-2 секція",
       },
-      {
-        img: require("../../assets/1room/1room2d4.png"),
-        size: " 47,2 м²",
-        floor: "1 поверх",
-        section: "1-2 секція",
-      },
     ],
     }
   },
