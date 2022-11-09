@@ -1,12 +1,13 @@
 <template>
   <div class="home">
-    <HeaderComponent />
-    <HeaderMobile />
+    <HeaderComponent class="headerComponent" />
+    <HeaderMobile class="headerMobile" />
     <LandingComponent />
     <BannerReady />
     <MoreAbout />
     <PlaningComponent />
     <ModerBaner />
+    <FooterComponent />
   </div>
 </template>
 
@@ -18,10 +19,12 @@
   import ModerBaner from "@/components/ModerBaner";
   import HeaderComponent from "@/components/HeaderComponent";
   import HeaderMobile from "@/components/HeaderMobile";
+  import FooterComponent from "@/components/FooterComponent";
 
   export default {
     name: 'HomeView',
     components: {
+      FooterComponent,
       HeaderMobile,
       HeaderComponent,
       ModerBaner,
@@ -33,7 +36,7 @@
   }
 </script>
 <style>
-.headerDesktop,
+.headerComponent,
 .headerMobile {
   position: absolute;
   z-index: 3;
@@ -42,7 +45,7 @@
   display: none;
 }
 @media screen and (max-width: 768px) {
-  .headerDesktop {
+  .headerComponent {
     display: flex;
   }
 }
