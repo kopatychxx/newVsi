@@ -6,7 +6,7 @@
         <div class="lines">
           <div class="line"></div>
         </div>
-        <p style="color: gray">перші дві черги введенні в експлуатацію</p>
+        <p style="color: gray; margin: 0;">перші дві черги введенні в експлуатацію</p>
       </div>
     </div>
     <div class="bannerContent">
@@ -61,7 +61,7 @@ export default {
   width: 50px;
   height: 2px;
   content: '';
-  background-color: green;
+  background-color: #36593B;
   margin-right: 35px;
 }
 .bannerContent {
@@ -78,17 +78,17 @@ export default {
   width: 450px;
 }
 .butt {
-  border: 1px solid green;
-  width: 200px;
+  border: 1px solid #36593B;
+  width: 220px;
   text-align: center;
-  padding: 5px;
+  padding: 15px;
   border-radius: 35px;
   background: white;
   cursor: pointer;
   margin-top: 35px;
 }
 .butt:hover {
-  background: green;
+  background: #36593B;
   transition: background 0.5s ease;
   color: white;
 }
