@@ -19,12 +19,7 @@ export default {
 <style>
 @font-face {
   font-family: "TT Firs Neue";
-  src: local("Neue Regilar"),
+  src: local(TT Firs Neue),
   url('./fonts/TTFirsNeue-Regular.ttf') format("truetype");
-}
-@font-face {
-  font-family: "TT Firs Neue";
-  src: local("Neue Bold"),
-  url('./fonts/TTFirsNeue-Bold.ttf') format("truetype");
 }
 </style>
