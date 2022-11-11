@@ -18,6 +18,7 @@
           :icon="require('../assets/homeMarker.svg')"
       ></gmap-marker>
     </gmap-map>
+    <v-btn class="buttonMap"><a href="https://goo.gl/maps/bdCCr3zZuT2N4JhL9">Прокласти маршрут</a></v-btn>
   </div>
 </template>
 
@@ -47,6 +48,11 @@ export default {
 <style scoped>
 .mapComponent {
   margin: 35px 15%;
+}
+.buttonMap {
+  position: relative;
+  bottom: 65px;
+  left: 10px;
 }
 @media screen and (max-width: 1024px) {
   .mapComponent {
