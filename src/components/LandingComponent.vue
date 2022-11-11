@@ -57,11 +57,10 @@ export default {
   color: #ffffff;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .ar {
-  top: 700px;
-  position: absolute;
-  left: 30%;
-  z-index: 2;
+  padding-top: 350px;
+  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -99,24 +98,15 @@ export default {
   }
 }
 @media screen and (max-width: 1440px) {
-  .ar {
-    top: 400px;
-    left: 20%;
-  }
 }
 @media screen and (max-width: 1024px) {
-  .ar {
-    top: 400px;
-    left: 5%;
-  }
 }
 @media screen and (max-width: 768px) {
-  .ar {
-    top: 320px;
-    left: 0;
-  }
+
   .carousel__mobile {
     display: block;
+    position: absolute;
+    z-index: 0;
   }
   .landingImg {
     display: none;
