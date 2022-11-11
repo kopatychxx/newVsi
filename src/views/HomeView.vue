@@ -13,6 +13,7 @@
       <p>Життя з усіма її плюсами, але з незайманою природою за вікном - найкраще, що ви можете вибрати для себе та близьких.</p>
     </div>
     <FormComponent />
+    <MapComponent />
     <FooterComponent />
   </div>
 </template>
@@ -28,10 +29,12 @@
   import FooterComponent from "@/components/FooterComponent";
   import EcologicalBanner from "@/components/EcologicalBanner";
   import FormComponent from "@/components/FormComponent";
+  import MapComponent from "@/components/MapComponent";
 
   export default {
     name: 'HomeView',
     components: {
+      MapComponent,
       FormComponent,
       EcologicalBanner,
       FooterComponent,

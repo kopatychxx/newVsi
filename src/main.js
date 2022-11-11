@@ -7,6 +7,7 @@ import VueCarousel from 'vue-carousel';
 import VueScrollTo from 'vue-scrollto'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import * as VueGoogleMaps from "vue2-google-maps";
 AOS.init();
 Vue.use(VueScrollTo)
 Vue.use(VueCarousel);
@@ -19,3 +20,9 @@ new Vue({
   vuetify,
   render: h => h(App)
 }).$mount('#app')
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: "AIzaSyBNzdjgEnPbM0eHZU5lJTorXKrxNSQugsY",
+    libraries: "places",
+  },
+});
