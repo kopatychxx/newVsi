@@ -107,12 +107,13 @@ export default {
 @media screen and (max-width: 1024px) {
   .ar {
     top: 400px;
-    left: 7%;
+    left: 5%;
   }
 }
 @media screen and (max-width: 768px) {
   .ar {
     top: 320px;
+    left: 0;
   }
   .carousel__mobile {
     display: block;
