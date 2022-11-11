@@ -1,6 +1,10 @@
 <template>
   <div class="footerComponent">
-    <a href="mailto:info@vsisvoihouse.com">info@vsisvoihouse.com</a>
+    <div class="left">
+      <a href="mailto:info@vsisvoihouse.com">info@vsisvoihouse.com</a>
+      <a href="tel:+380972211570">+38(097)-221-15-70</a>
+    </div>
+
     <div class="link">
       <a href="https://www.facebook.com/vsisvoihouse"
       ><img src="../assets/facebook.svg" alt=""
@@ -21,13 +25,16 @@ export default {
 <style scoped>
 .footerComponent {
   background: #36593B;
-  height: 85px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   align-items: center;
   column-gap: 65px;
-  position: relative;
+  padding: 30px 15%;
+}
+.left {
+  display: flex;
+  column-gap: 30px;
 }
 .link {
   display: flex;
@@ -43,11 +50,11 @@ export default {
 }
 @media only screen and (max-width: 1024px) {
   .footerComponent {
-    padding: 0 5%;
+    padding: 35px 5%;
   }
 }
 @media only screen and (max-width: 768px) {
-  .footerComponent a {
+  .left a {
     font-size: 18px;
   }
 }
@@ -60,7 +67,11 @@ export default {
   .footerComponent {
     padding: 25px;
     flex-direction: column;
-    height: 180px;
+    row-gap: 25px;
+  }
+  .left{
+    text-align: center;
+    flex-direction: column;
     row-gap: 25px;
   }
 }

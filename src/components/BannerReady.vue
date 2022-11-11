@@ -133,6 +133,7 @@ export default {
   }
   .textMobile {
     display: flex;
+    margin: 0 0 15px;
   }
   .left {
     margin-top: 5px;
