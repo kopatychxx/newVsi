@@ -10,13 +10,15 @@
         :center="center"
         :options="options"
         :zoom="17"
-        map-type-id="terrain"
+
+        map-type-id="satellite"
         style="width: auto; height: 555px"
     >
       <gmap-marker
           :position="center"
           :icon="require('../assets/homeMarker.svg')"
-      ></gmap-marker>
+      >
+      </gmap-marker>
     </gmap-map>
   </div>
 </template>
@@ -26,6 +28,7 @@ export default {
   name: "MapComponent",
   data() {
     return {
+      openedMarkerID: null,
       center: {
         lat: 50.3930871,
         lng: 30.2347964,
@@ -36,9 +39,17 @@ export default {
       locations: [],
     };
   },
+  methods: {
+    openMarker(id) {
+      this.openedMarkerID = id
+    }
+  }
 }
 </script>
 
 <style scoped>
+.mapComponent {
+  margin: 35px 15%;
+}
 
 </style>
