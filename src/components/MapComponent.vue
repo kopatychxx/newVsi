@@ -5,7 +5,7 @@
       <br>
       с. Білогородка, Саєнка, 11
     </p>
-    <gmap-map
+    <Gmap-map
         class="map"
         :center="center"
         :options="options"
@@ -14,12 +14,12 @@
         map-type-id="satellite"
         style="width: auto; height: 555px"
     >
-      <gmap-marker
+      <Gmap-marker
           :position="center"
           :icon="require('../assets/homeMarker.svg')"
       >
-      </gmap-marker>
-    </gmap-map>
+      </Gmap-marker>
+    </Gmap-map>
   </div>
 </template>
 
