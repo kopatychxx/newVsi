@@ -18,7 +18,7 @@
           :icon="require('../assets/homeMarker.svg')"
       ></gmap-marker>
     </gmap-map>
-    <v-btn class="buttonMap"><a href="https://goo.gl/maps/7F6Ei3FftrxeQyPq59">Прокласти маршрут</a></v-btn>
+    <v-btn class="buttonMap"><a href="https://goo.gl/maps/7F6Ei3FftrxeQyPq5">Прокласти маршрут</a></v-btn>
   </div>
 </template>
 
