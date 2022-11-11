@@ -34,13 +34,8 @@ h3 {
   width: 350px !important;
 }
 .form__btn {
-  background-color: white !important;
-  border: 1px solid #36593B;
-  border-radius: 35px;
-}
-.form__btn:hover {
   background-color: #36593B !important;
-  transition: background 0.5s ease;
+  border-radius: 35px;
   color: white;
 }
 @media screen and (max-width: 1024px) {
