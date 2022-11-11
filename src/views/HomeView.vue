@@ -50,10 +50,10 @@
 </script>
 <style>
 h1, h2,h3,h4 {
-  font-family: 'TT Firs Neue', serif;
+  font-family: 'TT Firs Neue', serif !important;
 }
 p, span, a, li{
-  font-family: 'TT Firs Neue' ,serif;
+  font-family: 'TT Firs Neue' ,serif !important;
 }
 h3 {
   font-weight: 300;
