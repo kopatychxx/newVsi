@@ -48,5 +48,10 @@ export default {
 .mapComponent {
   margin: 35px 15%;
 }
+@media screen and (max-width: 1024px) {
+  .mapComponent {
+    margin: 35px 5%;
+  }
+}
 
 </style>
