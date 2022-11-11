@@ -53,6 +53,11 @@ export default {
   position: relative;
   bottom: 65px;
   left: 10px;
+  border-radius: 35px;
+}
+.buttonMap a {
+  text-decoration: none;
+  color: #36593B;
 }
 @media screen and (max-width: 1024px) {
   .mapComponent {
