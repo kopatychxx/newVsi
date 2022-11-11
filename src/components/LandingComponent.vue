@@ -15,8 +15,8 @@
         <span></span>
         <span></span>
       </div>
-      </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -44,6 +44,9 @@ export default {
 .carousel__mobile {
   display: none;
 }
+.landing {
+  position: relative;
+}
 .landingImg {
   display: block;
   height: 100vh;
@@ -58,9 +61,9 @@ export default {
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .ar {
-  top: 700px;
+  bottom: 70px;
   position: absolute;
-  left: 26%;
+  left: calc(50%);
   z-index: 2;
   display: flex;
   justify-content: center;
@@ -99,22 +102,12 @@ export default {
   }
 }
 @media screen and (max-width: 1440px) {
-  .ar {
-    top: 400px;
-    left: 20%;
-  }
+
 }
 @media screen and (max-width: 1024px) {
-  .ar {
-    top: 400px;
-    left: 7%;
-  }
+
 }
 @media screen and (max-width: 768px) {
-  .ar {
-    top: 320px;
-    left: 5%;
-  }
   .carousel__mobile {
     display: block;
   }
@@ -126,9 +119,6 @@ export default {
   .landing__title {
     font-size: 32px;
     line-height: normal;
-  }
-  .ar {
-    top: 460px;
   }
 }
 @media screen and (max-width: 320px) {
