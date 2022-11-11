@@ -10,6 +10,7 @@
         :center="center"
         :options="options"
         :zoom="17"
+        map-type-id="terrain"
         style="width: auto; height: 555px"
     >
       <gmap-marker
