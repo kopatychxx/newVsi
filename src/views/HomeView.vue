@@ -49,6 +49,12 @@
   }
 </script>
 <style>
+h1, h2,h3,h4 {
+  font-family: 'Neue Bold', Helvetica, Arial,serif;
+}
+p, span, a, li{
+  font-family: 'Neue Regular', Helvetica, Arial,serif;
+}
 .headerComponent,
 .headerMobile {
   position: absolute;

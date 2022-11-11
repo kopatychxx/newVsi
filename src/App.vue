@@ -16,3 +16,15 @@ export default {
   }),
 };
 </script>
+<style>
+@font-face {
+  font-family: "TT Firs Neue";
+  src: local("Neue Regilar"),
+  url('./fonts/TTFirsNeue-Regular.ttf') format("truetype");
+}
+@font-face {
+  font-family: "TT Firs Neue";
+  src: local("Neue Bold"),
+  url('./fonts/TTFirsNeue-Bold.ttf') format("truetype");
+}
+</style>
