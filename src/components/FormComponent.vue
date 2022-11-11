@@ -53,7 +53,7 @@ h3 {
     flex-direction: column;
   }
   h3 {
-    font-size: 45px;
+    font-size: 30px;
   }
 }
 </style>

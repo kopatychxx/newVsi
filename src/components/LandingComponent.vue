@@ -63,7 +63,7 @@ export default {
 .ar {
   bottom: 70px;
   position: absolute;
-  left: calc(50%);
+  left: calc(50% - 490px);
   z-index: 2;
   display: flex;
   justify-content: center;
@@ -105,7 +105,12 @@ export default {
 
 }
 @media screen and (max-width: 1024px) {
-
+  .ar {
+    left: calc(50% - 436px);
+  }
+  .landing__title {
+    font-size: 50px;
+  }
 }
 @media screen and (max-width: 768px) {
   .carousel__mobile {
@@ -119,6 +124,9 @@ export default {
   .landing__title {
     font-size: 32px;
     line-height: normal;
+  }
+  .ar {
+    left: 0;
   }
 }
 @media screen and (max-width: 320px) {

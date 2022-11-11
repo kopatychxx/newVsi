@@ -148,7 +148,7 @@ export default {
     display: none;
   }
   .bannerHeader h3 {
-    font-size: 45px;
+    font-size: 30px;
   }
 }
 </style>
