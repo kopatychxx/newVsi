@@ -12,6 +12,7 @@
       <h3>ПРО ЛОКАЦІЮ ТА ІНФРАСТРУКТУРУ</h3>
       <p>Життя з усіма її плюсами, але з незайманою природою за вікном - найкраще, що ви можете вибрати для себе та близьких.</p>
     </div>
+    <FormComponent />
     <FooterComponent />
   </div>
 </template>
@@ -26,10 +27,12 @@
   import HeaderMobile from "@/components/HeaderMobile";
   import FooterComponent from "@/components/FooterComponent";
   import EcologicalBanner from "@/components/EcologicalBanner";
+  import FormComponent from "@/components/FormComponent";
 
   export default {
     name: 'HomeView',
     components: {
+      FormComponent,
       EcologicalBanner,
       FooterComponent,
       HeaderMobile,
