@@ -8,6 +8,8 @@ import VueScrollTo from 'vue-scrollto'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import * as VueGoogleMaps from "vue2-google-maps";
+import VueTheMask from 'vue-the-mask'
+Vue.use(VueTheMask)
 
 AOS.init();
 Vue.use(VueScrollTo)
