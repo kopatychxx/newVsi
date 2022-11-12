@@ -9,11 +9,13 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import * as VueGoogleMaps from "vue2-google-maps";
 import VueTheMask from 'vue-the-mask'
-Vue.use(VueTheMask)
+import VueMeta from 'vue-meta'
 
 AOS.init();
 Vue.use(VueScrollTo)
 Vue.use(VueCarousel);
+Vue.use(VueMeta)
+Vue.use(VueTheMask)
 
 Vue.config.productionTip = false
 Vue.use(VueGoogleMaps, {

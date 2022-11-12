@@ -10,7 +10,9 @@
 
 export default {
   name: 'App',
-
+  metaInfo: {
+    title: 'ЖК "Всі Свої"',
+  },
   data: () => ({
     //
   }),
