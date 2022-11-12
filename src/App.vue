@@ -12,6 +12,7 @@ export default {
   name: 'App',
   metaInfo: {
     title: 'ЖК "Всі Свої"',
+    description: "Житловий комплекс комфорт-класу у Білогородці"
   },
   data: () => ({
     //
