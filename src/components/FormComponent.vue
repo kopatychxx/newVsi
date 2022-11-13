@@ -2,9 +2,15 @@
   <div class="formComponent">
     <h3>Записатися на перегляд</h3>
     <form class="form" ref="form" @submit.prevent="sendEmail">
-      <v-text-field name="user_name" class="form__input" label="Імя" color="#36593B"></v-text-field>
-      <v-text-field name="message" class="form__input" type="number" label="Номер телефона" placeholder="+38(023)-123-45-67" color="#36593B"></v-text-field>
-      <input  @click.stop="dialog = true" class="form__btn" type="submit" value="Записатись">
+      <v-text-field v-model="name" name="user_name" class="form__input" label="Імя" color="#36593B"></v-text-field>
+<!--        <div v-if="v$.name.$error">-->
+<!--            {{ v$.name.$errors[0].$message }}-->
+<!--        </div>-->
+      <v-text-field v-model="message" name="message" class="form__input" type="number" label="Номер телефона" placeholder="+38(023)-123-45-67" color="#36593B"></v-text-field>
+<!--        <div v-if="v$.message.$error">-->
+<!--            {{ v$.message.$errors[0].$message }}-->
+<!--        </div>-->
+      <v-btn  class="form__btn" type="submit" value="Записатись">Записатись</v-btn>
     </form>
     <v-dialog
         v-model="dialog"
@@ -24,17 +30,34 @@
 </template>
 
 <script>
-import emailjs from '@emailjs/browser';
+import { useVuelidate } from '@vuelidate/core';
+import { required, helpers } from '@vuelidate/validators';
 export default {
   name: "FormComponent",
   data () {
     return {
+      v$: useVuelidate(),
       dialog: false,
+        name: '',
+        message: '',
     }
   },
+    validations: {
+        name: {
+            required: helpers.withMessage('This field is required', required),
+        },
+        message: {
+            required: helpers.withMessage('This field is required', required),
+        },
+    },
   methods: {
     sendEmail() {
-      emailjs.sendForm('service_c5su7be', 'template_d7i1qli', this.$refs.form, 'R6tVQhwgEHtKs6UqN')
+        this.v$.$validate()
+        if (!this.v$.$error) {
+            console.log(this.name, this.message)
+          this.dialog = true
+        }
+      // emailjs.sendForm('service_c5su7be', 'template_d7i1qli', this.$refs.form, 'R6tVQhwgEHtKs6UqN')
     }
   }
 }
