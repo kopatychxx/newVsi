@@ -62,7 +62,7 @@ export default {
     text-align: right;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 428px) {
   .moreAbout,
   .right{
     flex-direction: column;

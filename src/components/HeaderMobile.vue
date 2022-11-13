@@ -37,7 +37,7 @@ export default {
     position: relative;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 428px) {
   .headerMobile li img {
     width: 100px;
   }

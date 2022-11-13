@@ -119,8 +119,11 @@ export default {
   .landingImg {
     display: none;
   }
+  .ar {
+    left: 0;
+  }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 428px) {
   .landing__title {
     font-size: 32px;
     line-height: normal;

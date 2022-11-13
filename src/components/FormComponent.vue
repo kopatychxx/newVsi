@@ -118,7 +118,7 @@ h3 {
     height: 50px !important;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 428px) {
   .form {
     flex-direction: column;
   }

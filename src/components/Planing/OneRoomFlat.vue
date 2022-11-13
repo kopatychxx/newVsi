@@ -115,7 +115,7 @@ export default {
     margin: 0 5%;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 428px) {
   .flat__img {
     width: 330px;
   }

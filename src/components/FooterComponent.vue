@@ -63,7 +63,7 @@ export default {
     flex-wrap: wrap;
   }
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 428px) {
   .footerComponent {
     padding: 25px;
     flex-direction: column;
