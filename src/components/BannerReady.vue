@@ -101,17 +101,6 @@ export default {
   }
 }
 @media screen and (max-width: 768px) {
-  .left {
-    width: 280px;
-  }
-  .bannerContent img {
-    width: 380px;
-  }
-  .bannerHeader h3 {
-    line-height: normal;
-  }
-}
-@media screen and (max-width: 425px) {
   .bannerContent {
     align-items: center;
     flex-direction: column;

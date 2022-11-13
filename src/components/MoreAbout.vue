@@ -49,8 +49,8 @@ export default {
 }
 @media screen and (max-width: 768px){
   .moreAbout {
-    width: auto;
-    margin: 0 5%;
+    width: 90%;
+    margin: 0 auto;
   }
   .left h4 {
     font-size: 20px;
@@ -58,9 +58,13 @@ export default {
   .left p {
     font-size: 18px;
   }
+  .right {
+    text-align: right;
+  }
 }
 @media screen and (max-width: 425px) {
-  .moreAbout {
+  .moreAbout,
+  .right{
     flex-direction: column;
     text-align: center;
   }

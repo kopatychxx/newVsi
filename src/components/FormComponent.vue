@@ -104,6 +104,18 @@ h3 {
 @media screen and (max-width: 768px) {
   .form {
   width: 100%;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  .form__input {
+    width: 100% !important;
+  }
+  .form__btn {
+    width: 100% !important;
+    height: 50px !important;
   }
 }
 @media screen and (max-width: 425px) {
