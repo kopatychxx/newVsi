@@ -22,7 +22,7 @@ Vue.use(VueTheMask)
 Vue.config.productionTip = false
 Vue.use(VueGoogleMaps, {
   load: {
-    key: "AIzaSyBNzdjgEnPbM0eHZU5lJTorXKrxNSQugsY",
+    key: "AIzaSyDH2R4vRf8y-t0p5HqnTMU51b7B4YP7Y0M",
     libraries: "places",
   },
 });
