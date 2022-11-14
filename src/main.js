@@ -10,6 +10,8 @@ import 'aos/dist/aos.css';
 import * as VueGoogleMaps from "vue2-google-maps";
 import VueTheMask from 'vue-the-mask'
 import VueMeta from 'vue-meta'
+import Vuelidate from 'vuelidate'
+Vue.use(Vuelidate)
 
 AOS.init();
 Vue.use(VueScrollTo)

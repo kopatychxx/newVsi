@@ -20,8 +20,7 @@ export default {
         { name: 'description', content:  'Квартири і комерційні приміщення в готовому житловому комплексі ВСІ СВОЇ у Білогородці. Вигідні умови придбання.'},
         { property: 'og:title', content: "Житловий комплекс комфорт-класу у Білогородці"},
         { property: 'og:site_name', content: 'ЖК Всі Свої'},
-        {property: 'og:type', content: 'website'},
-        {name: 'robots', content: 'index,follow'}
+        {property: 'og:type', content: 'website'}
       ]
     }
   }

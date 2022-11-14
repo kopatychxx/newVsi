@@ -3,15 +3,11 @@
     <h3>Записатися на перегляд</h3>
     <form class="form" ref="form" @submit.prevent="sendEmail">
       <v-text-field v-model="name" name="user_name" class="form__input" label="Імя" color="#36593B"></v-text-field>
-<!--        <div v-if="v$.name.$error">-->
-<!--            {{ v$.name.$errors[0].$message }}-->
-<!--        </div>-->
       <v-text-field v-model="message" name="message" class="form__input" type="number" label="Номер телефона" placeholder="+38(023)-123-45-67" color="#36593B"></v-text-field>
-<!--        <div v-if="v$.message.$error">-->
-<!--            {{ v$.message.$errors[0].$message }}-->
-<!--        </div>-->
       <v-btn  class="form__btn" type="submit" value="Записатись">Записатись</v-btn>
     </form>
+    <p class="typo__p" style="color: red" v-if="submitStatus === 'ERROR'">Заповніть усі поля</p>
+    <p class="typo__p" v-if="submitStatus === 'PENDING'">Відправка</p>
     <v-dialog
         v-model="dialog"
         max-width="290"
@@ -30,34 +26,40 @@
 </template>
 
 <script>
-import { useVuelidate } from '@vuelidate/core';
-import { required, helpers } from '@vuelidate/validators';
+import { required } from 'vuelidate/lib/validators'
+import * as emailjs from "@emailjs/browser";
 export default {
+
   name: "FormComponent",
   data () {
     return {
-      v$: useVuelidate(),
       dialog: false,
-        name: '',
-        message: '',
+      name: '',
+      message: '',
+      submitStatus: null
     }
   },
     validations: {
-        name: {
-            required: helpers.withMessage('This field is required', required),
-        },
-        message: {
-            required: helpers.withMessage('This field is required', required),
-        },
+        name: { required },
+        message: { required }
     },
   methods: {
     sendEmail() {
-        this.v$.$validate()
-        if (!this.v$.$error) {
-            console.log(this.name, this.message)
-          this.dialog = true
-        }
-      // emailjs.sendForm('service_c5su7be', 'template_d7i1qli', this.$refs.form, 'R6tVQhwgEHtKs6UqN')
+      console.log('submit!')
+      this.$v.$touch()
+      if (this.$v.$invalid) {
+        this.submitStatus = 'ERROR'
+      } else {
+        // do your submit logic here
+        this.submitStatus = 'PENDING'
+        setTimeout(() => {
+          this.submitStatus = 'OK'
+              this.name = ''
+              this.message = ''
+              this.dialog = true
+              emailjs.sendForm('service_c5su7be', 'template_d7i1qli', this.$refs.form, 'R6tVQhwgEHtKs6UqN')
+        }, 500)
+      }
     }
   }
 }
