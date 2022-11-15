@@ -59,6 +59,7 @@ export default {
   line-height: 71px;
   color: #ffffff;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 15px;
 }
 .ar {
   bottom: 70px;
@@ -70,7 +71,7 @@ export default {
   flex-direction: column;
 }
 .arrow-down {
-  margin: 0 auto;
+  margin: 25px auto 0;
 }
 .arrow-down span {
   display: block;

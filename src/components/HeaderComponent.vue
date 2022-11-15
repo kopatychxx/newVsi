@@ -8,7 +8,7 @@
     <li v-scroll-to="{ element: '#infrastution', duration: 3000, offset: 90 }">
       <a href="">Інфраструктура</a>
     </li>
-    <li v-scroll-to="{ element: '#contacts', duration: 3000, offset: 90 }">
+    <li v-scroll-to="{ element: '#footerComponent', duration: 3000, offset: 90 }">
       <a href="">Контакти</a>
     </li>
   </ul>

@@ -1,5 +1,5 @@
 <template>
-  <div class="formComponent">
+  <div class="formComponent" id="formComponent">
     <h3>Записатися на перегляд</h3>
     <form class="form" ref="form" @submit.prevent="sendEmail">
       <v-text-field v-model="name" name="user_name" class="form__input" label="Імя" color="#36593B"></v-text-field>

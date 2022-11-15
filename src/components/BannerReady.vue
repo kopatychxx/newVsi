@@ -22,8 +22,8 @@
         </div>
       </div>
       <img data-aos="fade-left" data-aos-duration="4000" src="../assets/BannerReady.jpg" alt="">
-    <div class="butt mobbutton">Записатися на перегляд
-    </div>
+    <v-btn  v-scroll-to="{ element: '#formComponent', duration: 3000, offset: 90 }" class="butt mobbutton">Записатися на перегляд
+    </v-btn>
     </div>
   </div>
 </template>

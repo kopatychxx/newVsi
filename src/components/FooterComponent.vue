@@ -1,5 +1,5 @@
 <template>
-  <div class="footerComponent">
+  <div class="footerComponent" id="footerComponent">
     <div class="left">
       <a href="mailto:info@vsisvoihouse.com">info@vsisvoihouse.com</a>
       <a href="tel:+380972211570">+38(097)-221-15-70</a>

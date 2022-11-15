@@ -7,6 +7,7 @@
         <img data-aos="fade-right" data-aos-duration="6000" src="../assets/ModernBanner/third.png" alt="">
       </div>
       <div data-aos="fade-left" data-aos-duration="6000" class="text">
+        <img class="arrowbanner" src="../assets/arrowBanner.png" alt="">
         <h3>Сучасно</h3>
         <p>Готові квартири підключені до всіх необхідних комунікацій, встановлені вікна і двері, залишається тільки обрати дизайн</p>
       </div>
@@ -21,6 +22,10 @@ export default {
 </script>
 
 <style scoped>
+.arrowbanner {
+  top: -100px;
+  position: relative;
+}
 .moderBaner {
   padding: 35px 15%;
   background-color: #36593B;
