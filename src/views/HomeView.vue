@@ -58,6 +58,9 @@ p, span, a, li{
 h3 {
   font-weight: 300;
 }
+.home {
+  overflow: hidden;
+}
 .headerComponent,
 .headerMobile {
   position: absolute;
