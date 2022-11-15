@@ -1,6 +1,6 @@
 <template>
   <div class="landing">
-    <v-carousel class="carousel__mobile" cycle hide-delimiters :show-arrows="false" height="100vh">
+    <v-carousel touchless class="carousel__mobile" cycle hide-delimiters :show-arrows="false" height="100vh">
       <v-carousel-item
           v-for="(item,i) in items"
           :key="i"
