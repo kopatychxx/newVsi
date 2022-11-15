@@ -1,8 +1,8 @@
 <template>
   <div class="footerComponent" id="footerComponent">
     <div class="left">
+      <a style="font-weight: 700" href="tel:+380972211570">+38(097)-221-15-70</a>
       <a href="mailto:info@vsisvoihouse.com">info@vsisvoihouse.com</a>
-      <a href="tel:+380972211570">+38(097)-221-15-70</a>
     </div>
 
     <div class="link">
@@ -31,6 +31,7 @@ export default {
   align-items: center;
   column-gap: 65px;
   padding: 30px 15%;
+  position: relative;
 }
 .left {
   display: flex;
@@ -63,7 +64,7 @@ export default {
     flex-wrap: wrap;
   }
 }
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 620px) {
   .footerComponent {
     padding: 25px;
     flex-direction: column;

@@ -2,9 +2,9 @@
   <div class="formComponent" id="formComponent">
     <h3>Записатися на перегляд</h3>
     <form class="form" ref="form" @submit.prevent="sendEmail">
-      <v-text-field v-model="name" name="user_name" class="form__input" label="Імя" color="#36593B"></v-text-field>
+      <v-text-field v-model="name" name="user_name" class="form__input" label="Ім'я" color="#36593B"></v-text-field>
       <v-text-field v-model="message" name="message" class="form__input" type="number" label="Номер телефона" placeholder="+38(023)-123-45-67" color="#36593B"></v-text-field>
-      <v-btn  class="form__btn" type="submit" value="Записатись">Записатись</v-btn>
+      <v-btn  class="form__btn" type="submit" value="Записатись">ЗаписатисЯ</v-btn>
     </form>
     <p class="typo__p" style="color: red" v-if="submitStatus === 'ERROR'">Заповніть усі поля</p>
     <p class="typo__p" v-if="submitStatus === 'PENDING'">Відправка</p>
@@ -95,10 +95,10 @@ h3 {
 }
 @media screen and (max-width: 1440px) {
   .form__btn {
-    width: 300px !important;
+    width: 250px !important;
   }
   .form {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
