@@ -17,7 +17,7 @@ export default {
 
 <style scoped>
 .ecologicalBanner {
-  padding: 0 15%;
+  padding: 0 15% 35px;
   background-color: #36593B;
   color: white;
   text-align: center;
