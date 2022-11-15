@@ -7,7 +7,7 @@
     </p>
     <gmap-map
         class="map"
-        map-type-id="satellite"
+        map-type-id="roadmap"
         :center="center"
         :options="options"
         :zoom="17"

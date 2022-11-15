@@ -23,7 +23,8 @@ export default {
 
 <style scoped>
 .arrowbanner {
-  top: -100px;
+  width: 250px;
+  bottom: 30px;
   position: relative;
 }
 .moderBaner {
@@ -52,6 +53,9 @@ export default {
   .photo img {
     width: 250px;
   }
+  .arrowbanner {
+    width: 160px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .moderBaner {
@@ -66,6 +70,9 @@ export default {
   }
   .photo img {
     width: 200px;
+  }
+  .arrowbanner {
+    bottom: 0px;
   }
 }
 @media screen and (max-width: 768px) {

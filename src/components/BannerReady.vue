@@ -18,7 +18,7 @@
           Оберіть планування готових апартаментів від 20м2 до 115м2, замовте безкоштовний дизайн і насолоджуйтесь власним житлом вже сьогодні!
         </p>
         <p class="textMobile">Оберіть планування готових апартаментів від 20м2 до 115м2, замовте безкоштовний дизайн і насолоджуйтесь власним житлом вже сьогодні!</p>
-        <div class="butt deskButton">Записатися на перегляд
+        <div class="butt deskButton" v-scroll-to="{ element: '#formComponent', duration: 3000, offset: 0 }">Записатися на перегляд
         </div>
       </div>
       <img data-aos="fade-left" data-aos-duration="4000" src="../assets/BannerReady.jpg" alt="">
@@ -110,6 +110,8 @@ export default {
   }
   .mobbutton {
     display: flex;
+    width: 350px !important;
+    height: 60px !important;
   }
   .bannerContent {
     margin-top: 15px;
@@ -138,6 +140,13 @@ export default {
   }
   .bannerHeader h3 {
     font-size: 30px;
+  }
+}
+@media screen and (max-width: 425px){
+  .mobbutton {
+    display: flex;
+    width: 100% !important;
+    height: 60px !important;
   }
 }
 </style>

@@ -95,7 +95,13 @@ h3 {
 }
 @media screen and (max-width: 1440px) {
   .form__btn {
-    width: 50%;
+    width: 300px !important;
+  }
+  .form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 @media screen and (max-width: 1024px) {
