@@ -57,7 +57,7 @@ export default {
               this.name = ''
               this.message = ''
               this.dialog = true
-              emailjs.sendForm('service_c5su7be', 'template_d7i1qli', this.$refs.form, 'R6tVQhwgEHtKs6UqN')
+              emailjs.sendForm('service_7ws26e8', 'template_8gnrrvy', this.$refs.form, '_2G0RR4FTUwCRkRED')
         }, 500)
       }
     }
