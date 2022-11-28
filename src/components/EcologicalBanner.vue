@@ -2,7 +2,7 @@
   <div class="ecologicalBanner">
     <div class="left" data-aos="fade-right" data-aos-duration="6000">
       <h3>Екологічно</h3>
-      <p>Зона для зберігання автомобілів та <br> зарядки електрокарів відділена від <br> ігрового майданчика</p>
+      <p>Зона для зберігання автомобілів та зарядки електрокарів відділена від ігрового майданчика</p>
       <img src="../assets/mapIcon.png" alt="">
     </div>
     <img data-aos="fade-left" data-aos-duration="6000" src="../assets/guys.jpeg" alt="">
@@ -25,11 +25,14 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
+.left {
+  width: 350px;
+}
 h3 {
   font-size: 25px;
 }
 p {
-  margin: 35px 0;
+  margin: 0 0 35px;
 }
 img {
   width: 50%;

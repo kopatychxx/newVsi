@@ -76,7 +76,7 @@ h3 {
 .form{
   display: flex;
   justify-content: flex-start;
-  column-gap: 35px;
+  column-gap: 35px !important;
   width: 70%;
   margin-top: 50px;
 }

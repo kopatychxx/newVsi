@@ -7,7 +7,6 @@
           :src="item.src"
       ></v-carousel-item>
     </v-carousel>
-    <img class="landingImg" src="../assets/Landing/second.jpg" alt="">
     <div class="ar">
       <h1 class="landing__title">ЖИТЛОВИЙ КОМПЛЕКС <br> КОМФОРТ-КЛАСУ У БІЛОГОРОДЦІ</h1>
       <div class="arrow-down">
@@ -45,12 +44,13 @@ export default {
   display: none;
 }
 .landing {
-  position: relative;
-}
-.landingImg {
   display: block;
   height: 100vh;
   width: 100vw;
+  position: relative;
+  background-image: url('../assets/Landing/second.jpg');
+  background-size: cover;
+  background-position: center;
 }
 .landing__title {
   text-align: center;
@@ -117,8 +117,8 @@ export default {
   .carousel__mobile {
     display: block;
   }
-  .landingImg {
-    display: none;
+  .landing {
+    background-image: none;
   }
   .ar {
     left: 0;

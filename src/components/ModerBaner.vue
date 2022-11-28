@@ -24,7 +24,7 @@ export default {
 <style scoped>
 .arrowbanner {
   width: 170px;
-  top: -130px;
+  top: -80px;
   position: relative;
 }
 .moderBaner {
@@ -34,11 +34,15 @@ export default {
 .modern {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+h3 {
+  font-size: 25px;
 }
 .text {
   text-align: center;
   color: white;
-  margin-top: 50px;
+  width: 350px;
 }
 .photo {
   display: flex;
@@ -63,7 +67,7 @@ export default {
   }
   .text {
     position: relative;
-    top: -50px
+    top: 0px
   }
   .modern {
     column-gap: 20px;
