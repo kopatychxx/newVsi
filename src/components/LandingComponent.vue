@@ -25,13 +25,13 @@ export default {
     return {
       items: [
         {
-          src: require('../assets/LandingMobile/first.png'),
+          src: require('../assets/LandingMobile/first.webp'),
         },
         {
-          src: require('../assets/LandingMobile/second.png'),
+          src: require('../assets/LandingMobile/second.webp'),
         },
         {
-          src: require('../assets/LandingMobile/third.png'),
+          src: require('../assets/LandingMobile/third.webp'),
         },
       ],
     }
@@ -48,7 +48,7 @@ export default {
   height: 100vh;
   width: 100vw;
   position: relative;
-  background-image: url('../assets/Landing/second.jpg');
+  background-image: url('../assets/Landing/second.webp');
   background-size: cover;
   background-position: center;
 }

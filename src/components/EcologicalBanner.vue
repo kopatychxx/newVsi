@@ -3,9 +3,9 @@
     <div class="left" data-aos="fade-right" data-aos-duration="6000">
       <h3>Екологічно</h3>
       <p>Зона для зберігання автомобілів та зарядки електрокарів відділена від ігрового майданчика</p>
-      <img src="../assets/mapIcon.png" alt="">
+      <img src="../assets/mapIcon.webp" alt="">
     </div>
-    <img data-aos="fade-left" data-aos-duration="6000" src="../assets/guys.jpeg" alt="">
+    <img data-aos="fade-left" data-aos-duration="6000" src="../assets/guys.webp" alt="">
   </div>
 </template>
 

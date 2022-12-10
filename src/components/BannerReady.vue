@@ -21,7 +21,7 @@
         <div class="butt deskButton" v-scroll-to="{ element: '#formComponent', duration: 3000, offset: 0 }">Записатися на перегляд
         </div>
       </div>
-      <img data-aos="fade-left" data-aos-duration="4000" src="../assets/BannerReady.jpg" alt="">
+      <img data-aos="fade-left" data-aos-duration="4000" src="../assets/BannerReady.webp" alt="">
     <v-btn  v-scroll-to="{ element: '#formComponent', duration: 3000, offset: 90 }" class="butt mobbutton">Записатися на перегляд
     </v-btn>
     </div>

@@ -40,25 +40,25 @@ export default {
     return {
     flats: [
       {
-        img: require("../../assets/1room/1room3D.png"),
+        img: require("../../assets/1room/1room3D.webp"),
         size: " 32,1 до 47,2 м²",
         floor: "1-8 поверх",
         section: "1-2 секція",
       },
       {
-        img: require("../../assets/1room/1room2d1.png"),
+        img: require("../../assets/1room/1room2d1.webp"),
         size: "32,1 м²",
         floor: "1-8 поверх",
         section: "1-2 секція",
       },
       {
-        img: require("../../assets/1room/1room2d2.png"),
+        img: require("../../assets/1room/1room2d2.webp"),
         size: " 36,0 м²",
         floor: "1-8 поверх",
         section: "1-2 секція",
       },
       {
-        img: require("../../assets/1room/1room2d3.png"),
+        img: require("../../assets/1room/1room2d3.webp"),
         size: " 36,5 м²",
         floor: "1-8 поверх",
         section: "1-2 секція",

@@ -61,8 +61,8 @@ export default {
   data: () => ({
     flats: [
       {
-        img: require("../../assets/3room/3room3D.png"),
-        imgTwo: require("../../assets/3room/3room3D2.png"),
+        img: require("../../assets/3room/3room3D.webp"),
+        imgTwo: require("../../assets/3room/3room3D2.webp"),
         size: " 106,5 до 115,3 м² ",
         floor: "9 поверх",
         section: "1-2 секція",
@@ -70,24 +70,24 @@ export default {
         countFloor: 2,
       },
       {
-        img: require("../../assets/3room/3room2d1.png"),
-        imgTwo: require("../../assets/3room/3room2d1.png"),
+        img: require("../../assets/3room/3room2d1.webp"),
+        imgTwo: require("../../assets/3room/3room2d1.webp"),
         size: "106,5 м² ",
         floor: "9 поверх",
         section: "1-2 секція",
         text: "двохповерхові",
       },
       {
-        img: require("../../assets/3room/3room2d2.png"),
-        imgTwo: require("../../assets/3room/3room2d2.png"),
+        img: require("../../assets/3room/3room2d2.webp"),
+        imgTwo: require("../../assets/3room/3room2d2.webp"),
         size: " 110,2 м² ",
         floor: "9 поверх",
         text: "двохповерхові",
         section: "1-2 секція",
       },
       {
-        img: require("../../assets/3room/3room2d3.png"),
-        imgTwo: require("../../assets/3room/3room2d3.png"),
+        img: require("../../assets/3room/3room2d3.webp"),
+        imgTwo: require("../../assets/3room/3room2d3.webp"),
         size: " 115,3 м² ",
         floor: "9 поверх",
         text: "двохповерхові",

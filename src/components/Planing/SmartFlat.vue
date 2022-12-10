@@ -38,19 +38,19 @@ export default {
   data: () => ({
     flats: [
       {
-        img: require("../../assets/smartFlat/smart3D.png"),
+        img: require("../../assets/smartFlat/smart3D.webp"),
         size: " 20,7 - 23,2 м²",
         floor: "1-8 поверх",
         section: "1-2 секція",
       },
       {
-        img: require("../../assets/smartFlat/smart2d1.png"),
+        img: require("../../assets/smartFlat/smart2d1.webp"),
         size: " 20,7 - 23,2 м²",
         floor: "1-8 поверх",
         section: "1-2 секція",
       },
       {
-        img: require("../../assets/smartFlat/smart2d2.png"),
+        img: require("../../assets/smartFlat/smart2d2.webp"),
         size: " 20,7 - 23,2 м²",
         floor: "1-8 поверх",
         section: "1-2 секція",
