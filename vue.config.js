@@ -4,3 +4,15 @@ module.exports = defineConfig({
     'vuetify'
   ]
 })
+// eslint-disable-next-line no-global-assign
+require = require('esm')(module);
+const { routes } = require('./src/router');
+
+module.exports = {
+  pluginOptions: {
+    sitemap: {
+      baseURL: 'https://vsisvoi.com',
+      routes,
+    }
+  }
+}

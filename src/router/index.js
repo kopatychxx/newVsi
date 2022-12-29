@@ -1,21 +1,18 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+// import AdminView from "@/views/AdminView";
 
 Vue.use(VueRouter)
 
-const routes = [
+export const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
-  }
+    component: () => import('@/views/HomeView')
+  },
+  // {
+  //   path: '/admin',
+  //   name: 'admin',
+  //   component: AdminView
+  // }
 ]
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
-})
-
-export default router
