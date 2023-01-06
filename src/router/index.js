@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import LoginView from "@/views/LoginView";
+import AdminView from "@/views/AdminView";
+import firebase from "firebase";
+
 
 Vue.use(VueRouter)
 
@@ -9,7 +13,20 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
-  }
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginView
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: AdminView,
+    meta: {
+      authRequired: true,
+    }
+  },
 ]
 
 const router = new VueRouter({
@@ -17,5 +34,18 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
-
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.authRequired)) {
+    if (firebase.auth().currentUser) {
+      next();
+    } else {
+      alert('Вам потрiбно авторизуватись');
+      next({
+        path: '/login',
+      });
+    }
+  } else {
+    next();
+  }
+});
 export default router
