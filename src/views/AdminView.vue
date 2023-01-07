@@ -177,7 +177,7 @@
             <p class="main__rows-row-title">{{ Flat.name }}</p>
             <p class="main__rows-row-size">{{Flat.size}} м2</p>
             <p class="main__rows-row-section">{{ Flat.section }} секція</p>
-            <p class="main__rows-row-floor">{{ Flat.floor }} поверх</p>
+            <p class="main__rows-row-floor">{{ Flat.floor }} поверх/приміщення</p>
             <p class="main__rows-row-cost">{{ Flat.cost }} $</p>
             <p class="main__rows-row-costm2">{{ Flat.costm2 }} $</p>
             <p class="main__rows-row-status">{{ Flat.status }}</p>
@@ -233,11 +233,13 @@
 </template>
 
 <script>
-import firebase from "firebase";
+import { db } from '@/config/db'
 export default {
   name: "AdminView",
   data() {
     return {
+      page: 1,
+      pageSize: 20,
       user: null,
       statisticCards: [
         {
@@ -303,23 +305,37 @@ export default {
       accept: false
     };
   },
-  created() {
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        this.user = user;
-      } else {
-        this.user = null;
-      }
-    });
+  mounted() {
+    this.tableData = this.AllFlats;
   },
   methods: {
-    logOut() {
-      firebase.auth().signOut().then(() => {
-        firebase.auth().onAuthStateChanged(() => {
-          this.$router.push('/login')
-        })
-      })
+    handleFilterTableData() {
+      if (!this.filterData) this.tableData = this.AllFlats;
+      else
+        this.tableData = this.AllFlats.filter(
+            (i) =>
+                !i[this.filVal].toLowerCase().indexOf(this.filterData.toLowerCase())
+        );
+    },
+    addNewFlat() {
+      db.collection("flats").add({
+        name: this.newFlatName,
+        size: this.newFlatSize,
+        section: this.newFlatSection,
+        floor: this.newFlatFloor,
+        cost: this.newFlatCost,
+        costm2: this.newFlatCostM2,
+        status: this.newFlatStatus,
+        statuspay: this.newFlatStatusPay,
+        info: this.newFlatInfo,
+      });
+    },
+    deleteFlat(id) {
+      db.collection('flats').doc(id).delete()
     }
+  },
+  firestore: {
+    AllFlats: db.collection('flats')
   },
 }
 </script>
