@@ -131,17 +131,7 @@
       </div>
     </div>
     <div class="main">
-      <div class="main__statistic">
-        <v-card class="main__statistic-card"
-                :color="statisticCard.color"
-                v-for="statisticCard in statisticCards"
-                :key="statisticCard
-        ">
-          <h3>{{ statisticCard.name }}</h3>
-          <hr>
-          <p>{{ statisticCard.number }}</p>
-        </v-card>
-      </div>
+      <StatisticCard />
       <div class="main__content">
         <div class="main__content-filter">
           <v-select
@@ -169,12 +159,12 @@
                 v-model="filterData"
                 :items="filterItemStatus"
             ></v-select>
-            <v-btn @click="handleFilterTableData" class="main__content-filter-search-btn" style="height: 60px">Показати</v-btn>
+            <v-btn @click="handleFilterTableData()" class="main__content-filter-search-btn" style="height: 60px">Показати</v-btn>
           </div>
         </div>
         <div class="main__rows">
-          <div class="main__rows-row" v-for="Flat in tableData"
-               :key="Flat.id">
+          <div class="main__rows-row" v-for="(Flat, index) in filteredData"
+               :key="index">
             <p class="main__rows-row-title">{{ Flat.name }}</p>
             <p class="main__rows-row-size">{{Flat.size}} м2</p>
             <p class="main__rows-row-section">{{ Flat.section }} секція</p>
@@ -227,6 +217,7 @@
               </v-dialog>
             </div>
           </div>
+          <v-pagination class="pagination mb-2" v-model="page" :length="pages" @input="next"></v-pagination>
         </div>
       </div>
     </div>
@@ -235,38 +226,13 @@
 
 <script>
 import { db } from '@/config/db'
+import StatisticCard from "@/components/Admin/StatisticCard";
 export default {
   name: "AdminView",
-  data() {
-    return {
+  components: {StatisticCard},
+  data: () => ({
       user: null,
-      statisticCards: [
-        {
-          name: 'Всього',
-          number: this.flatCount2,
-          color: 'orange'
-        },
-        {
-          name: 'Вільно',
-          number: 2000,
-          color: 'red'
-        },
-        {
-          name: 'Продано',
-          number: 400,
-          color: 'green'
-        },
-        {
-          name: 'Завдаток',
-          number: 600,
-          color: 'yellow'
-        },
-        {
-          name: 'Бажаючий',
-          number: 800,
-          color: 'blue'
-        }
-      ],
+      page: 1,
       filterItemSelect: 'name',
       filterItem: [
         { text: 'Ім\'я', value: 'name' },
@@ -288,8 +254,6 @@ export default {
       filterData: null,
       tableData: null,
       AllFlats: {},
-      flatCount: '',
-      flatCount2: '',
       newFlatName: '',
       newFlatSize: '',
       newFlatSection: '',
@@ -303,20 +267,41 @@ export default {
       allFlat: null,
       filVal: 'name',
       dialog: false,
-      accept: false
-    };
+      accept: false,
+      filteredData: []
+    }),
+  firestore: {
+    AllFlats: db.collection('flats')
   },
-  mounted() {
+  async mounted() {
     this.tableData = this.AllFlats;
+    console.log(this.tableData, 'cerf')
+  },
+  computed: {
+    pages() {
+      return this.tableData ? Math.ceil(this.tableData.length / 15) : 0
     },
+  },
+  watch: {
+    tableData() {
+      this.next(1)
+    }
+  },
   methods: {
+    next(page) {
+      this.filteredData = this.tableData.slice(5 * page, 5 * (page + 1))
+    },
     handleFilterTableData() {
-      if (!this.filterData) this.tableData = this.AllFlats;
-      else
+      console.log(this.filterItemSelect, 'это филтр айтем')
+      console.log(this.filterData, 'это филтр дата')
+      if (!this.filterData) this.tableData = this.AllFlats
+      else {
         this.tableData = this.AllFlats.filter(
-            (i) =>
-                !i[this.filVal].toLowerCase().indexOf(this.filterData.toLowerCase())
-        );
+            // eslint-disable-next-line array-callback-return
+            (i) => !i[this.filterItemSelect].toString().toLowerCase().indexOf(this.filterData.toLowerCase())
+
+        )
+      }
     },
     addNewFlat() {
       db.collection("flats").add({
@@ -334,10 +319,6 @@ export default {
     deleteFlat(id) {
       db.collection('flats').doc(id).delete()
     }
-  },
-  firestore: {
-    AllFlats: db.collection('flats'),
-
   },
 }
 </script>
@@ -367,19 +348,6 @@ export default {
 }
 .main {
   margin: 50px 5%;
-}
-.main__statistic {
-  display: flex;
-  flex-wrap:wrap;
-  row-gap: 25px;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.main__statistic-card {
-  padding: 0;
-  width: 200px;
-  height: 140px;
-  border-radius: 10px;
 }
 .main__statistic-card h3 {
   font-weight: 500;
@@ -439,9 +407,9 @@ form .v-select{
   border-radius: 5px;
 }
 @media screen and (max-width: 425px){
-.main__statistic {
-  justify-content: center;
-}
+  .main__statistic {
+    justify-content: center;
+  }
   .main__statistic-card {
     width: 100%;
   }

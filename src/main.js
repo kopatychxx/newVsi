@@ -11,6 +11,9 @@ import * as VueGoogleMaps from "vue2-google-maps";
 import VueTheMask from 'vue-the-mask'
 import VueMeta from 'vue-meta'
 import Vuelidate from 'vuelidate'
+import VueGoodTablePlugin from 'vue-good-table';
+import 'vue-good-table/dist/vue-good-table.css'
+Vue.use(VueGoodTablePlugin);
 import { firestorePlugin } from 'vuefire'
 Vue.use(firestorePlugin)
 Vue.use(Vuelidate)

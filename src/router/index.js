@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import LoginView from "@/views/LoginView";
 import AdminView from "@/views/AdminView";
 import firebase from "firebase";
+import TableView from "@/views/TableView";
 
 
 Vue.use(VueRouter)
@@ -26,6 +27,11 @@ const routes = [
     meta: {
       authRequired: true,
     }
+  },
+  {
+    path: '/table',
+    name: 'table',
+    component: TableView,
   },
 ]
 
