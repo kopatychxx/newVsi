@@ -1,9 +1,10 @@
 <template>
   <v-main>
     <div class="headerBar">
-      <img src="../assets/logo.svg" width="150px" alt="">
+      <img src="../assets/logo_black.svg" width="150px" alt="">
       <div class="headerBar__buttons">
         <v-btn @click="dialog = true" class="addNewFlat">Додати квартиру</v-btn>
+        <v-btn @click="dialog = true" class="addNewFlatmob"><img src="../assets/addFlatmob.svg" alt=""></v-btn>
         <v-dialog
             v-model="dialog"
             fullscreen
@@ -238,13 +239,11 @@ export default {
   name: "AdminView",
   data() {
     return {
-      page: 1,
-      pageSize: 20,
       user: null,
       statisticCards: [
         {
           name: 'Всього',
-          number: 4000,
+          number: this.flatCount2,
           color: 'orange'
         },
         {
@@ -289,6 +288,8 @@ export default {
       filterData: null,
       tableData: null,
       AllFlats: {},
+      flatCount: '',
+      flatCount2: '',
       newFlatName: '',
       newFlatSize: '',
       newFlatSection: '',
@@ -307,7 +308,7 @@ export default {
   },
   mounted() {
     this.tableData = this.AllFlats;
-  },
+    },
   methods: {
     handleFilterTableData() {
       if (!this.filterData) this.tableData = this.AllFlats;
@@ -335,12 +336,16 @@ export default {
     }
   },
   firestore: {
-    AllFlats: db.collection('flats')
+    AllFlats: db.collection('flats'),
+
   },
 }
 </script>
 
 <style scoped>
+.addNewFlatmob {
+  display: none;
+}
 .headerBar {
   padding: 0 5%;
   height: 100px !important;
@@ -365,13 +370,15 @@ export default {
 }
 .main__statistic {
   display: flex;
+  flex-wrap:wrap;
+  row-gap: 25px;
   flex-direction: row;
   justify-content: space-between;
 }
 .main__statistic-card {
   padding: 0;
-  width: 255px;
-  height: 147px;
+  width: 200px;
+  height: 140px;
   border-radius: 10px;
 }
 .main__statistic-card h3 {
@@ -430,5 +437,25 @@ form .v-select{
   width: 50%;
   height: 60px;
   border-radius: 5px;
+}
+@media screen and (max-width: 425px){
+.main__statistic {
+  justify-content: center;
+}
+  .main__statistic-card {
+    width: 100%;
+  }
+  .addNewFlat {
+    display: none;
+  }
+  .addNewFlatmob {
+    display: flex;
+    box-shadow: none!important;
+    background-color: #fff !important;
+  }
+  .addNewFlatmob img {
+    width: 30px;
+
+  }
 }
 </style>
