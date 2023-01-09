@@ -71,7 +71,7 @@
               ></v-text-field>
               <v-text-field item-color="#3E583E" color="#3E583E" label="Вартість" type="text" hide-details="auto" v-model="selectCost"
               ></v-text-field>
-              <v-text-field item-color="#3E583E" color="#3E583E" label="Статус оплати" hide-details="auto" v-model="selectPricePay"
+              <v-text-field item-color="#3E583E" color="#3E583E" label="Статус оплати" hide-details="auto" v-model="selectpayStatus"
               ></v-text-field>
             </v-card>
             <v-btn color="#3E583E" @click="e6 = 4"><p style="color: #FFFFFF">Далi</p></v-btn>
@@ -123,7 +123,7 @@ export default {
       selectSize: '',
       selectCost: '',
       selectPrice: '',
-      selectPricePay: '',
+      selectpayStatus: '',
       selectInfo: '',
       e6: 1,
       typeFlat:['Комерційні', 'Смарт','1кімнатні','2кімнатні','З терасою'],
@@ -133,7 +133,7 @@ export default {
       roomFlat: [1,2,3,4,5,6],
       sizeFlat: '',
       priceFlat: '',
-      pricePayFlat: '',
+      payStatusFlat: '',
       infoFlat: '',
       AllFlats: {},
       countFlat: null
@@ -155,7 +155,7 @@ export default {
         room: this.selectRoom,
         cost: this.selectCost,
         status: this.selectStatus,
-        statusPay: this.selectPricePay,
+        payStatus: this.selectPricePay,
         info: this.selectInfo,
         id: this.countFlat+1
       });
