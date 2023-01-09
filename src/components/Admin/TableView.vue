@@ -39,7 +39,7 @@
           <v-select v-else item-color="#3E583E" color="#3E583E" :items="floorFlat" v-model="selectedFlat.floor" label="Поверх"></v-select>
           <v-text-field item-color="#3E583E" color="#3E583E" label="Розмір" type="text" hide-details="auto" v-model="selectedFlat.size"></v-text-field>
           <v-text-field item-color="#3E583E" color="#3E583E" label="Вартість" type="number" hide-details="auto" v-model="selectedFlat.cost"></v-text-field>
-          <v-text-field item-color="#3E583E" color="#3E583E" label="Статус оплати" type="text" hide-details="auto" v-model="selectedFlat.statuPay"></v-text-field>
+          <v-text-field item-color="#3E583E" color="#3E583E" label="Статус оплати" type="text" hide-details="auto" v-model="selectedFlat.payStatus"></v-text-field>
           <v-text-field item-color="#3E583E" color="#3E583E" label="Коментар" hide-details="auto" v-model="selectedFlat.info"></v-text-field>
         </v-card-text>
         <v-card-actions>
@@ -154,7 +154,7 @@ export default {
         },
         {
           label: 'Статус оплати',
-          field: 'statusPay',
+          field: 'payStatus',
           type: 'text',
           filterOptions: {
             enabled: true,
@@ -192,7 +192,7 @@ export default {
         room: '',
         size: '',
         cost: '',
-        statuPay: '',
+        payStatus: '',
         info: ''
       },
     };
@@ -211,7 +211,7 @@ export default {
       this.selectedFlat.room = params.row.room
       this.selectedFlat.cost = params.row.cost
       this.selectedFlat.size = params.row.size
-      this.selectedFlat.statuPay = params.row.statuPay
+      this.selectedFlat.payStatus = params.row.payStatus
       this.selectedFlat.info = params.row.info
       console.log(params.row);
       this.showMenu = true

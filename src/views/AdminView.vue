@@ -4,7 +4,7 @@
       <img src="../assets/logo_black.svg" width="150px" alt="">
       <div class="headerBar__buttons">
         <v-btn class="addNewFlat"><router-link to="/add">Додати квартиру</router-link></v-btn>
-        <v-btn @click="dialog = true" class="addNewFlatmob"><img src="../assets/addFlatmob.svg" alt=""></v-btn>
+        <router-link to="/add" class="mobAdd"><img src="../assets/addFlatmob.svg" alt="" style="width: 40px"></router-link>
         <v-btn icon><v-icon size="30" color="gray">mdi-login</v-icon></v-btn>
       </div>
     </div>
@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style scoped>
-.addNewFlatmob {
+.mobAdd {
   display: none;
 }
 .headerBar {
@@ -84,14 +84,14 @@ a {
   .addNewFlat {
     display: none;
   }
-  .addNewFlatmob {
+  .mobAdd {
     display: flex;
-    box-shadow: none!important;
-    background-color: #fff !important;
   }
   .addNewFlatmob img {
     width: 30px;
-
+  }
+  .addNewFlat {
+    display: none;
   }
 }
 </style>
