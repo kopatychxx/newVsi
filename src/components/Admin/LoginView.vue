@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <form class="loginForm" @submit.prevent="userLogin">
-      <img src="../assets/logo_black.svg" alt="">
+      <img src="../../assets/logo_black.svg" alt="">
       <input placeholder="Ім'я користувача" type="email" v-model="user.email" />
       <input placeholder="Пароль" type="password" v-model="user.password" />
       <button type="submit">Увійти</button>

@@ -1,11 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import LoginView from "@/views/LoginView";
+import LoginView from "@/components/Admin/LoginView";
 import AdminView from "@/views/AdminView";
 import firebase from "firebase";
-import TableView from "@/views/TableView";
-
+import NewFlat from "@/components/Admin/NewFlat";
 
 Vue.use(VueRouter)
 
@@ -29,9 +28,12 @@ const routes = [
     }
   },
   {
-    path: '/table',
-    name: 'table',
-    component: TableView,
+    path: '/add',
+    name: 'newFlat',
+    component: NewFlat,
+    meta: {
+      authRequired: true,
+    }
   },
 ]
 
