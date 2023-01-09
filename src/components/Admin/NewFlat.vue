@@ -155,7 +155,7 @@ export default {
         room: this.selectRoom,
         cost: this.selectCost,
         status: this.selectStatus,
-        payStatus: this.selectPricePay,
+        payStatus: this.selectpayStatus,
         info: this.selectInfo,
         id: this.countFlat+1
       });
