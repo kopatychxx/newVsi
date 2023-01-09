@@ -103,9 +103,7 @@
             <v-btn color="#3E583E" @click="addNewFlat(), e6 = 5"><p style="color: #FFFFFF">Додати</p></v-btn>
             <v-btn @click="e6 = 3" > Назад </v-btn>
           </v-stepper-content>
-
         </v-stepper>
-        <button @click="showCount">покажи</button>
       </div>
     </div>
   </main>
