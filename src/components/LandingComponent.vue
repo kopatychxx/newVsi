@@ -38,7 +38,7 @@ export default {
       },
       items: [
         {
-          img: require("@/assets/suchasno/one.jpg"),
+          img: require("@/assets/suchasno/five.jpg"),
         },
         {
           img: require("@/assets/suchasno/two.jpg"),
@@ -50,7 +50,7 @@ export default {
           img: require("@/assets//suchasno/four.jpg"),
         },
         {
-          img: require("@/assets//suchasno/five.jpg"),
+          img: require("@/assets//suchasno/one.jpg"),
         },
         ],
     }
