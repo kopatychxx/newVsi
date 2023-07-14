@@ -9,7 +9,6 @@
     </div>
     <div class="ar">
       <h1 class="landing__title">ЖИТЛОВИЙ КОМПЛЕКС <br> КОМФОРТ-КЛАСУ У БІЛОГОРОДЦІ</h1>
-      <h1 class="landing__title_mob">КВАРТИРИ З ДОКУМЕНТАМ</h1>
       <div class="arrow-down">
         <span></span>
         <span></span>
