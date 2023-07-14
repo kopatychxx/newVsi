@@ -1,5 +1,9 @@
 <template>
   <div data-aos="slide-up" data-aos-duration="4000" class="planingComponent" id="planing">
+    <div class="planning_title">
+      <h3>Обери планування квартири мрії</h3>
+      <img src="@/assets/finger_down.png" alt="">
+    </div>
     <v-select
         class="selectFlat"
         v-model="select"
@@ -37,15 +41,33 @@ export default {
 
 <style scoped>
 .planingComponent {
-  margin: 75px 15% 150px;
+  margin: 35px 15% 150px;
 }
 .selectFlat {
   width: 250px;
   margin-bottom: 25px;
 }
+.planning_title {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.planning_title h3 {
+  font-size: 25px;
+}
+.planning_title img {
+  width: 35px;
+}
 @media screen and (max-width: 1024px) {
   .planingComponent {
     margin: 75px 5%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .planning_title h3 {
+    font-size: 25px;
   }
 }
 </style>

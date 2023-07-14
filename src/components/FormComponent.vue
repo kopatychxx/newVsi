@@ -70,7 +70,7 @@ export default {
   margin: 75px 15%;
 }
 h3 {
-  font-size: 55px;
+  font-size: 25px;
   text-transform: uppercase;
 }
 .form{
@@ -78,7 +78,7 @@ h3 {
   justify-content: flex-start;
   column-gap: 35px !important;
   width: 70%;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .form__input {
   width: 350px !important;
@@ -116,7 +116,7 @@ h3 {
     margin-top: 10px;
   }
   h3 {
-    font-size: 30px;
+    font-size: 25px;
   }
   .form__input {
     width: 100% !important;
@@ -129,9 +129,6 @@ h3 {
 @media screen and (max-width: 428px) {
   .form {
     flex-direction: column;
-  }
-  h3 {
-    font-size: 30px;
   }
   .form__btn {
     width: 70%;

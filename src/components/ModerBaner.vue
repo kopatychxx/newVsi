@@ -10,7 +10,7 @@
       </div>
       <div data-aos="fade-left" data-aos-duration="6000" class="text">
         <img class="arrowbanner" src="../assets/arrowBanner.webp" alt="">
-        <h3>Сучасно</h3>
+        <h3>Покращений ремонт</h3>
         <p>Готові квартири підключені до всіх необхідних комунікацій, встановлені вікна і двері, залишається тільки обрати дизайн</p>
       </div>
     </div>

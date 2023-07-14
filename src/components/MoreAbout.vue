@@ -2,8 +2,8 @@
   <div data-aos="zoom-in" data-aos-duration="4000" class="moreAbout">
     <div class="left">
       <p>Більше про планування</p>
-      <h4>Ціна від 30 700грн за м2 <br>
-      Площі від 20 до 115м2
+      <h4>Ціна від 30 000грн за м2 <br>
+          Площі від 20 до 115м2
       </h4>
     </div>
     <div class="right">
@@ -24,15 +24,14 @@ export default {
 
 <style scoped>
 .moreAbout {
-  width: 800px;
+  width: 100vw;
   background-color: #36593B;
-  margin: 0 auto;
-  padding: 70px 30px;
-  border-radius: 35px;
+  padding: 70px 0px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  column-gap: 100px;
 }
 .left p {
   font-size: 20px;
@@ -45,31 +44,21 @@ export default {
 .right p {
   color: white;
   font-size: 15px;
-  font-weight: 100;
 }
 @media screen and (max-width: 768px){
   .moreAbout {
-    width: 90%;
     margin: 0 auto;
-  }
-  .left h4 {
-    font-size: 20px;
-  }
-  .left p {
-    font-size: 18px;
+    flex-direction: column;
   }
   .right {
-    text-align: right;
+    display: none;
+  }
+  .left p { display: none}
+  .left h4 {
+    font-size: 25px;
+    text-align: center;
   }
 }
 @media screen and (max-width: 428px) {
-  .moreAbout,
-  .right{
-    flex-direction: column;
-    text-align: center;
-  }
-  .left {
-    margin-bottom: 55px;
-  }
 }
 </style>

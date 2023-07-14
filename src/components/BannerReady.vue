@@ -1,12 +1,15 @@
 <template>
   <div class="bannerReady">
     <div class="bannerHeader">
-      <h3>ГОТОВІ КВАРТИРИ</h3>
-      <div class="subtitle">
-        <div class="lines">
-          <div class="line"></div>
+      <div class="green_line"></div>
+      <div class="bannerHeader_text">
+        <h3>ГОТОВІ КВАРТИРИ</h3>
+        <div class="subtitle">
+          <div class="lines">
+            <div class="line"></div>
+          </div>
+          <p style="color: gray; margin: 0;">перші дві черги введенні в експлуатацію</p>
         </div>
-        <p style="color: gray; margin: 0;">перші дві черги введенні в експлуатацію</p>
       </div>
     </div>
     <div  class="bannerContent">
@@ -50,7 +53,7 @@ export default {
   align-items: flex-end;
 }
 .bannerHeader h3 {
-  font-size: 55px;
+  font-size: 25px;
 }
 .subtitle{
   display: flex;
@@ -95,6 +98,9 @@ export default {
 .textMobile {
   display: none;
 }
+.green_line {
+  display: none;
+}
 @media screen and (max-width: 1024px) {
   .bannerReady {
     margin: 75px 5%;
@@ -105,8 +111,24 @@ export default {
     align-items: center;
     flex-direction: column;
   }
+  .bannerHeader{
+    justify-content: left;
+    column-gap: 20px;
+  }
+  .green_line{
+    display: block;
+    width: 5px;
+    height: 70px;
+    content: '';
+    background-color: #36593B;
+  }
   .deskButton {
     display: none;
+  }
+  .subtitle {
+  }
+  .bannerHeader h3 {
+    font-size: 25px;
   }
   .mobbutton {
     display: flex;
@@ -135,11 +157,13 @@ export default {
     padding: 15px 30px;
     width: 250px;
   }
-  .subtitle {
-    display: none;
+}
+@media screen and (max-width: 467px) {
+  .bannerHeader{
+    column-gap: 10px;
   }
-  .bannerHeader h3 {
-    font-size: 30px;
+  .line {
+    margin-right: 5px;
   }
 }
 @media screen and (max-width: 425px){
@@ -147,6 +171,13 @@ export default {
     display: flex;
     width: 100% !important;
     height: 60px !important;
+  }
+  .line {
+    width: 10px;
+    margin-right: 5px;
+  }
+  .bannerHeader {
+    column-gap: 5px;
   }
 }
 </style>

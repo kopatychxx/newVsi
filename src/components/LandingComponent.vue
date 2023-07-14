@@ -38,10 +38,10 @@ export default {
       },
       items: [
         {
-          img: require("@/assets/suchasno/five.jpg"),
+          img: require("@/assets/suchasno/two.jpg"),
         },
         {
-          img: require("@/assets/suchasno/two.jpg"),
+          img: require("@/assets/suchasno/five.jpg"),
         },
         {
           img: require("@/assets//suchasno/three.jpg"),
