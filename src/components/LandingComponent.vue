@@ -1,14 +1,15 @@
 <template>
   <div class="landing">
-    <v-carousel touchless class="carousel__mobile" cycle hide-delimiters :show-arrows="false" height="100vh">
-      <v-carousel-item
-          v-for="(item,i) in items"
-          :key="i"
-          :src="item.src"
-      ></v-carousel-item>
-    </v-carousel>
+    <div class="bg_mob">
+      <hooper :settings="hooperSettings" >
+          <slide v-for="item in items" :key="item.img" :index="item.img">
+               <img class="hooper__img" :src="item.img"/>
+          </slide>
+        </hooper>
+    </div>
     <div class="ar">
       <h1 class="landing__title">ЖИТЛОВИЙ КОМПЛЕКС <br> КОМФОРТ-КЛАСУ У БІЛОГОРОДЦІ</h1>
+      <h1 class="landing__title_mob">КВАРТИРИ З ДОКУМЕНТАМ</h1>
       <div class="arrow-down">
         <span></span>
         <span></span>
@@ -19,21 +20,40 @@
 </template>
 
 <script>
+import { Hooper, Slide } from 'hooper';
+import 'hooper/dist/hooper.css';
 export default {
   name: "LandingComponent",
+  components: {
+    Hooper,
+    Slide
+  },
   data () {
     return {
+      hooperSettings: {
+        itemsToShow: 1,
+//        autoPlay: true,
+        playSpeed: 3000,
+        centerMode: true,
+        infiniteScroll: true
+      },
       items: [
         {
-          src: require('../assets/LandingMobile/first.webp'),
+          img: require("@/assets/suchasno/one.jpg"),
         },
         {
-          src: require('../assets/LandingMobile/second.webp'),
+          img: require("@/assets/suchasno/two.jpg"),
         },
         {
-          src: require('../assets/LandingMobile/third.webp'),
+          img: require("@/assets//suchasno/three.jpg"),
         },
-      ],
+        {
+          img: require("@/assets//suchasno/four.jpg"),
+        },
+        {
+          img: require("@/assets//suchasno/five.jpg"),
+        },
+        ],
     }
   },
 }
@@ -48,11 +68,14 @@ export default {
   height: 100vh;
   width: 100vw;
   position: relative;
-  background-image: url('../assets/Landing/second.webp');
+  background-image: url('@/assets/Landing/second.webp');
   background-size: cover;
   background-position: center;
 }
-.landing__title {
+.bg_mob {
+  display: none
+}
+.landing__title, .landing__title_mob {
   text-align: center;
   font-weight: 400;
   font-size: 55px;
@@ -61,6 +84,9 @@ export default {
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 15px;
 }
+.landing__title_mob {
+  display:none;
+  }
 .ar {
   bottom: 70px;
   position: absolute;
@@ -114,21 +140,35 @@ export default {
   }
 }
 @media screen and (max-width: 768px) {
-  .carousel__mobile {
-    display: block;
-  }
-  .landing {
-    background-image: none;
-  }
-  .ar {
-    left: 0;
-  }
-}
-@media screen and (max-width: 428px) {
   .landing__title {
+    display: none;
+  }
+  .landing__title_mob {
+    display: block;
+    margin-bottom: 130px;
     font-size: 32px;
     line-height: normal;
   }
+  .ar {
+    left: 0;
+    right: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .bg_mob {
+  display: block;
+  }
+  .hooper {
+  height: 100vh;
+  left: -24px;
+  width: 124vw;
+  }
+  .hooper__img {
+  width: 104vw !important;
+  height: 100vh !important;
+  }
+}
+@media screen and (max-width: 428px) {
   .ar {
     left: 0;
   }

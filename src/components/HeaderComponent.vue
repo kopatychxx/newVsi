@@ -4,7 +4,7 @@
     <li v-scroll-to="{ element: '#planing', duration: 3000, offset: -200 }">
       <a href="">Планування</a>
     </li>
-    <li><img src="../assets/logo.svg" alt="" /></li>
+    <li><img class="logo" src="../assets/logo.svg" alt="" /></li>
     <li v-scroll-to="{ element: '#infrastution', duration: 3000, offset: 90 }">
       <a href="">Інфраструктура</a>
     </li>
@@ -60,4 +60,5 @@ export default {
     display: none;
   }
 }
+
 </style>
