@@ -68,9 +68,9 @@ export default {
   background-color: #36593B;
 }
 .modern {
-/*  display: flex;*/
-/*  flex-direction: row;*/
-/*  justify-content: space-between;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 h3 {
   font-size: 25px;
