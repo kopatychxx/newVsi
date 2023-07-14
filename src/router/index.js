@@ -5,6 +5,7 @@ import LoginView from "@/components/Admin/LoginView";
 import AdminView from "@/views/AdminView";
 import firebase from "firebase";
 import NewFlat from "@/components/Admin/NewFlat";
+import Test from "@/components/test.vue"
 
 Vue.use(VueRouter)
 
@@ -26,6 +27,11 @@ const routes = [
     meta: {
       authRequired: true,
     }
+  },
+  {
+    path: '/test',
+    name: 'test',
+    component: Test
   },
   {
     path: '/add',

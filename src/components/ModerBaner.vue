@@ -2,9 +2,11 @@
   <div class="moderBaner">
     <div class="modern">
       <div class="photo">
-        <img data-aos="fade-right" data-aos-duration="4000" src="../assets/ModernBanner/first.webp" alt="">
-        <img data-aos="fade-right" data-aos-duration="5000" src="../assets/ModernBanner/second.webp" alt="">
-        <img data-aos="fade-right" data-aos-duration="6000" src="../assets/ModernBanner/third.webp" alt="">
+        <hooper :settings="hooperSettings" >
+          <slide v-for="item in items" :key="item.img" :index="item.img">
+               <img class="hooper__img" :src="item.img"/>
+          </slide>
+        </hooper>
       </div>
       <div data-aos="fade-left" data-aos-duration="6000" class="text">
         <img class="arrowbanner" src="../assets/arrowBanner.webp" alt="">
@@ -16,14 +18,48 @@
 </template>
 
 <script>
+import { Hooper, Slide } from 'hooper';
+import 'hooper/dist/hooper.css';
 export default {
-  name: "ModerBaner"
+  name: "ModerBaner",
+  components: {
+    Hooper,
+    Slide
+  },
+  data() {
+    return {
+      hooperSettings: {
+        itemsToShow: 3,
+        autoPlay: true,
+        playSpeed: 2000,
+        infiniteScroll: true
+
+      },
+      items: [
+        {
+          img: require("@/assets/suchasno/one.jpg"),
+        },
+        {
+          img: require("@/assets/suchasno/two.jpg"),
+        },
+        {
+          img: require("@/assets//suchasno/three.jpg"),
+        },
+        {
+          img: require("@/assets//suchasno/four.jpg"),
+        },
+        {
+          img: require("@/assets//suchasno/five.jpg"),
+        },
+        ],
+    }
+  },
 }
 </script>
 
 <style scoped>
 .arrowbanner {
-  width: 170px;
+/*  width: 170px;*/
   top: -80px;
   position: relative;
 }
@@ -32,12 +68,21 @@ export default {
   background-color: #36593B;
 }
 .modern {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  justify-content: space-between;*/
 }
 h3 {
   font-size: 25px;
+}
+.photo {
+width: 70%
+}
+.hooper{
+height: 100% !important;
+}
+.hooper__img {
+width: 250px;
 }
 .text {
   text-align: center;
@@ -49,18 +94,12 @@ h3 {
   position: relative;
   top: -90px;
 }
-.photo img {
-  width: 300px;
-}
 
 @media screen and (max-width: 1440px) {
-  .photo img {
-    width: 250px;
   }
   .arrowbanner {
     width: 160px;
   }
-}
 @media screen and (max-width: 1024px) {
   .moderBaner {
     padding: 35px 5%;
@@ -68,12 +107,6 @@ h3 {
   .text {
     position: relative;
     top: 0px
-  }
-  .modern {
-    column-gap: 20px;
-  }
-  .photo img {
-    width: 200px;
   }
   .arrowbanner {
     top: -80px;
