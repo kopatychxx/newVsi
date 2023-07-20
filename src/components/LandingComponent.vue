@@ -142,12 +142,6 @@ export default {
   .landing__title {
     display: none;
   }
-  .landing__title_mob {
-    display: block;
-    margin-bottom: 130px;
-    font-size: 32px;
-    line-height: normal;
-  }
   .ar {
     left: 0;
     right: 0;
@@ -156,6 +150,9 @@ export default {
 @media screen and (max-width: 600px) {
   .bg_mob {
   display: block;
+  }
+  .landing {
+    background: none;
   }
   .hooper {
   height: 100vh;
