@@ -160,7 +160,7 @@ export default {
   width: 124vw;
   }
   .hooper__img {
-  width: 104vw !important;
+  width: 125vw !important;
   height: 100vh !important;
   }
 }
