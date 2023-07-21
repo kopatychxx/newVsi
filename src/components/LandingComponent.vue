@@ -31,10 +31,13 @@ export default {
     return {
       hooperSettings: {
         itemsToShow: 1,
-//        autoPlay: true,
+       autoPlay: true,
         playSpeed: 3000,
         centerMode: true,
-        infiniteScroll: true
+        infiniteScroll: true,
+        touchDrag: false,
+        mouseDrag: false,
+        wheelControl: false
       },
       items: [
         {
